@@ -1,0 +1,37 @@
+<% include partials/header %>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+    }
+    </style>
+   
+
+        <h1> <%= title %> </h1>
+    
+    <table style="width:100%">
+      <tr>
+        <th>Make</th>
+        <th>Model</th> 
+        <th>Year</th>
+      </tr>
+      
+      
+            <% for (let i = 0; i < cars.length; i++) { %>
+
+                <tr>
+                  <td>
+                    <%= cars[i].make %>
+                  </td>
+                  <td>
+                    <%= cars[i].model %>
+                  </td>
+                  <td>
+                    <%= cars[i].year %>
+                  </td>
+                  <% } %>
+      </tr>
+
+    </table>
+
+    <% include partials/footer %>
+    
