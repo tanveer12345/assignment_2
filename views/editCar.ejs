@@ -1,0 +1,16 @@
+<% include partials/header %>
+<form method="POST">
+    Make:<br>
+    <input type="text" name="make" value="<%= car.make %>" >
+    <br>
+    Model:<br>
+    <input type="text" name="model" value="<%= car.model %>">
+    <br>
+    Year:<br>
+    <input type="text" name="year" value="<%= car.year %>" >
+    <br><br>
+    <input type="submit" value="Submit">
+
+    
+  </form> 
+  <% include partials/footer %>

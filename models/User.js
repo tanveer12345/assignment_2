@@ -8,4 +8,6 @@ const userSchema = new mongoose.Schema({});
 
 userSchema.plugin(passportLocalMongoose);
 
+userSchema.plugin(findOrCreate);
+
 module.exports = mongoose.model('User', userSchema);

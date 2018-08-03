@@ -9,13 +9,25 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', carController.homePage);
 
-router.get('/admin', carController.admin);
+router.get('/cars', carController.getCars);
+
+router.get('/admin', authController.isLoggedIn, carController.admin);
+router.get('/admin/edit/:id', carController.editCar);
+router.post('/admin/edit/:id', carController.updateCar);
+
+router.get('/add', authController.isLoggedIn, carController.addCar);
+router.post('/add', authController.isLoggedIn, carController.createCar);
 
 router.get('/register', userController.registerForm);
-router.post('/register', userController.register);
+router.post('/register', userController.register, authController.login);
 
 router.get('/login', userController.loginForm);
 router.post('/login', authController.login);
+
+router.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/games');
+});
 
 router.get('/google', authController.googlePre);
 router.get('/google/callback', authController.googlePost);
