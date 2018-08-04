@@ -1,3 +1,11 @@
+/*
+File name: authCotroller.js
+Author's name: Tanveer
+Website name: azuresite.com
+File Description: This file is for authentication of user.
+
+*/
+
 const passport = require('passport');
 const mongoose = require('mongoose');
 

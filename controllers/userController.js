@@ -1,3 +1,11 @@
+/*
+File name: userCotroller.js
+Author's name: Tanveer
+Website name: azuresite.com
+File Description: This file is responsible for registration.
+
+*/
+
 const passport = require('passport');
 const User = require('../models/User');
 

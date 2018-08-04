@@ -1,3 +1,11 @@
+/*
+File name: index.js
+Author's name: Tanveer
+Website name: azuresite.com
+File Description: This file is to get pages. 
+
+*/
+
 var express = require('express');
 const carController = require('../controllers/carsController');
 const userController = require('../controllers/userController');
