@@ -77,3 +77,17 @@ exports.homePage = (req, res) => {
       }
     });
   };
+
+  
+exports.deleteCar = (req, res) => {
+    Car.findByIdAndRemove(
+      { _id: req.params.id },
+      async (err, carJustDeleted) => {
+        if (err) {
+          console.log(err);
+        } else {
+          res.redirect('/admin');
+        }
+      },
+    );
+  };

@@ -21,7 +21,7 @@ exports.registerForm = (req, res) => {
           user: req.user,
         });
       }
-      next(); /* success */
+      res.redirect('login');
     });
   };
 

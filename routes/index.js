@@ -14,6 +14,7 @@ router.get('/cars', carController.getCars);
 router.get('/admin', authController.isLoggedIn, carController.admin);
 router.get('/admin/edit/:id', carController.editCar);
 router.post('/admin/edit/:id', carController.updateCar);
+router.get('/admin/delete/:id', carController.deleteCar);
 
 router.get('/add', authController.isLoggedIn, carController.addCar);
 router.post('/add', authController.isLoggedIn, carController.createCar);
@@ -26,7 +27,7 @@ router.post('/login', authController.login);
 
 router.get('/logout', (req, res) => {
   req.logout();
-  res.redirect('/games');
+  res.redirect('/cars');
 });
 
 router.get('/google', authController.googlePre);

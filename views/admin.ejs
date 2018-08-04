@@ -15,6 +15,7 @@
         <th>Model</th> 
         <th>Year</th>
         <th>Edit</th>
+        <th>Delete</th>
       </tr>
       
       
@@ -33,6 +34,9 @@
                   <td>
                         <a href="/admin/edit/<%= cars[i]._id %>">Edit</a>
                       </td>
+                      <td>
+                            <a href="/admin/delete/<%= cars[i]._id %>" onclick="return confirm('You want to delete this?');">Delete</a>
+                          </td>
                   <% } %>
       </tr>
 
